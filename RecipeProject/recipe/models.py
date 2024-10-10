@@ -107,7 +107,7 @@ class Review(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        unique_together = ('recipe', 'user')
+        unique_together = ( 'user')
 
     def __str__(self):
-        return f"{self.user.username} - {self.recipe.title} ({self.rating})"
+        return f"{self.user.username} - {self.rating})"
