@@ -101,7 +101,6 @@ class RecipePhoto(models.Model):
         return self.description if self.description else f"Photo {self.id}"
 
 class Review(models.Model):
-    recipe = models.ForeignKey(Recipe, related_name='reviews', on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     rating = models.IntegerField()
     comment = models.TextField(blank=True, null=True)
